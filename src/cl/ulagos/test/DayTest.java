@@ -57,7 +57,6 @@ public class DayTest
 		day1.makeAppointment(17, a9);
 	}
 
-
 	@Test
 	public void t4a_firstAppointmentInEmptyDayShouldSucceed()
 	{
@@ -145,9 +144,6 @@ public class DayTest
 		boolean actual =   day1.makeAppointment(9,longAppointment);
 		//then should fail
 		assertEquals(false, actual);
-
-
-
 	}
 }
 
