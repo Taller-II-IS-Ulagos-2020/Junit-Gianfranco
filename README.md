@@ -4,3 +4,5 @@
     2. Crear un test para verificar que el método findSpace retorna el valor de -1, si se hace un intento de agendar una cita en un día que esté lleno.
     3. Crear un test negativo (usar la instrucción assertFalse) para el siguiente caso. Intentar inicializar una cita de un ahora y luego poner una cita de dos horas a la misma hora. Que sucede cuando corre el test? Incluir un screenshot en el reporte.
     4. Hacer cambios al programa para que acepte citas de media hora. Testear.
+    
+    Fecha Entrega 6-11-2020
