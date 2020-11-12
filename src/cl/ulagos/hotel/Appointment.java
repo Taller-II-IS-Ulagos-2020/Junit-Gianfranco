@@ -12,14 +12,14 @@ public class Appointment
     // The reason for the appointment.
     private String description;
     // The length (in hours) of the appointment.
-    private int duration;
+    private double duration;
 
     /**
      * Create an appointment with a given duration.
      * @param description The reason for the appointment.
      * @param duration The length of the appointment in hours.
      */
-    public Appointment(String description, int duration)
+    public Appointment(String description, double duration)
     {
         this.description = description;
         this.duration = duration;
@@ -36,7 +36,7 @@ public class Appointment
     /**
      * @return The duration (in hours) of the appointment.
      */
-    public int getDuration()
+    public double getDuration()
     {
         return duration;
     }

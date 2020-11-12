@@ -40,7 +40,7 @@ public class Day
      */ 
     public int findSpace(Appointment appointment)
     {
-        int duration = appointment.getDuration();
+        double duration = appointment.getDuration();
         for(int slot = 0; slot < MAX_APPOINTMENTS_PER_DAY; slot++) {
             if(appointments[slot] == null) {
                 final int time = START_OF_DAY + slot;
@@ -51,7 +51,7 @@ public class Day
                 }
                 else {
                     // How many more slots are needed?
-                    int further_slots_required = duration - 1;
+                    double further_slots_required = duration - 1;
                     for(int nextSlot = slot + 1;
                                 further_slots_required > 0 &&
                                 appointments[nextSlot] == null;
@@ -82,7 +82,7 @@ public class Day
         if(validTime(time)) {
             int startTime = time - START_OF_DAY;
             if(appointments[startTime] == null) {
-                int duration = appointment.getDuration();
+                double duration = appointment.getDuration();
                 // Fill in all the slots for the full duration
                 // of the appointment.
                 for(int i = 0; i < duration; i++) {

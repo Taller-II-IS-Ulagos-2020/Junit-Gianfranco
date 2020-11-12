@@ -145,5 +145,33 @@ public class DayTest
 		//then should fail
 		assertEquals(false, actual);
 	}
+	@Test //Primera Pregunta
+	public void  Verificador(){
+		day1.makeAppointment(9, a1);
+		int actual = day1.findSpace(new Appointment("Reunion",1));
+		assertEquals(10,actual); //Retorna 10 para el valor de una cita
+	}
+	@Test //Segunda Pregunta
+	public void Verificador2(){
+		fillDay();
+		day1.makeAppointment(9, a1);
+		int actual = day1.findSpace(new Appointment("Reunion",1));
+		assertEquals(-1,actual); //Retorna -1 si el dia esta lleno
+	}
+	@Test //Tercera Pregunta
+	public void Verificador3() {
+		Appointment Cita1 = new Appointment("Reunion2",1);
+		day1.makeAppointment(11, Cita1);
+		Appointment OverlappedCita = new Appointment("2hrsAppointment",2);
+		boolean actual = day1.makeAppointment(11,OverlappedCita);
+		assertFalse(actual);
+	}
+	@Test //Cuarta Pregunta
+	public void Verificador4() {
+		Appointment Reunion = new Appointment("Reunion2",0.5);
+		boolean success = day1.makeAppointment(12, Reunion);
+		assertEquals(true, success);
+	}
+	
 }
 
